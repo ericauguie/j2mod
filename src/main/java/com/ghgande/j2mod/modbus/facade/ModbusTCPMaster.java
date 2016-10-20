@@ -103,6 +103,7 @@ public class ModbusTCPMaster extends AbstractModbusMaster {
         if (connection != null && !connection.isConnected()) {
             connection.connect(useRtuOverTcp);
             transaction = connection.getModbusTransport().createTransaction();
+            ((ModbusTCPTransaction)transaction).setConnection(connection);
             ((ModbusTCPTransaction)transaction).setReconnecting(reconnecting);
             setTransaction(transaction);
         }
@@ -182,6 +183,6 @@ public class ModbusTCPMaster extends AbstractModbusMaster {
 
     @Override
     public AbstractModbusTransport getTransport() {
-        return connection == null ? null : connection.getModbusTransport();
+    	return connection == null ? null : connection.getModbusTransport();
     }
 }
