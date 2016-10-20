@@ -8,7 +8,11 @@
     <artifactId>j2mod</artifactId>
     <name>j2mod</name>
     <url>https://github.com/steveohara/j2mod</url>
+<<<<<<< Upstream, based on origin/development
     <version>2.3.2-VIF-SNAPSHOT</version>
+=======
+    <version>2.3.1-VIF</version>
+>>>>>>> debb6c7 change to 2.3.1-VIF
     <description>A fork of the j2mod library to support the jSerialComm connector</description>
 
     <packaging>jar</packaging>
